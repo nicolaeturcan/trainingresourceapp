@@ -69,7 +69,11 @@ class Training_Resource_Controller extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+        $training_resource = Training_Resource::find($id);
+        $training_resource->done = Request::input('done');
+        $training_resource->save();
+
+        return $training_resource;
 	}
 
 	/**
@@ -80,7 +84,7 @@ class Training_Resource_Controller extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+        Training_Resource::destroy($id);
 	}
 
 }
