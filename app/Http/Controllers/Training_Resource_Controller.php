@@ -72,7 +72,12 @@ class Training_Resource_Controller extends Controller
     public function update($id)
     {
         $training_resource = Training_Resource::find($id);
-        $training_resource->done = Request::input('done');
+        $training_resource->training_resource_name = Request::input('training_resource_name');
+/*        $training_resource->training_resource_short_name = Request::input('training_resource_short_name');
+        $training_resource->training_resource_description = Request::input('training_resource_description');
+        $training_resource->training_resource_thumbnail = Request::input('training_resource_thumbnail');
+        $training_resource->training_resource_external_url = Request::input('training_resource_external_url');
+        $training_resource->training_resource_softDeleted = Request::input('training_resource_softDeleted');*/
         $training_resource->save();
 
         return $training_resource;
