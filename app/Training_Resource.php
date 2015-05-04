@@ -4,6 +4,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Training_Resource extends Model {
 
+    public $timestamps = false;
+
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'training_resource';
+
+    /**
+     * Primary key of the table
+     * @var string
+     */
+    protected $primaryKey = 'training_resource_id';
+
+
     protected $fillable = array('training_resource_name', 'training_resource_short_name',
         'training_resource_description', 'training_resource_thumbnail', 'training_resource_external_url',
         'training_resource_softDeleted');
