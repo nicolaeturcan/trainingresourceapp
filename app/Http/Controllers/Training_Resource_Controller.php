@@ -71,14 +71,31 @@ class Training_Resource_Controller extends Controller
      */
     public function update($id)
     {
+        // TODO: Make this working!
+
         $training_resource = Training_Resource::find($id);
-        $training_resource->training_resource_name = Request::input('training_resource_name');
-/*        $training_resource->training_resource_short_name = Request::input('training_resource_short_name');
+        $input = Request::all();
+
+        /*
+        $input = array_except(Input::all(), ['training_resource_last_update', 'training_resource_creationUserId',
+            'training_resource_lastupdateUserId', 'training_resource_entryDate', 'training_resource_softDeletedDate',
+            'training_resource_parentResourceId']);
+         *
+         *
+         * $training_resource->training_resource_name = Request::input('training_resource_name');
+        $training_resource->training_resource_short_name = Request::input('training_resource_short_name');
         $training_resource->training_resource_description = Request::input('training_resource_description');
         $training_resource->training_resource_thumbnail = Request::input('training_resource_thumbnail');
         $training_resource->training_resource_external_url = Request::input('training_resource_external_url');
         $training_resource->training_resource_softDeleted = Request::input('training_resource_softDeleted');*/
-        $training_resource->save();
+        $training_resource->save($input);
+
+        //, 'training_resource_last_update'
+//, 'training_resource_creationUserId'
+//, 'training_resource_lastupdateUserId'
+//, 'training_resource_entryDate'
+//, 'training_resource_softDeletedDate'
+//, 'training_resource_parentResourceId'
 
         return $training_resource;
     }
