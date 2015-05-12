@@ -144,6 +144,9 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		
+		// CORS https://github.com/barryvdh/laravel-cors
+		'Barryvdh\Cors\CorsServiceProvider',
 
 	],
 
