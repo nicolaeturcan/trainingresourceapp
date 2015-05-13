@@ -49,7 +49,10 @@ class Training_Resource_Controller extends Controller
      */
     public function show($id)
     {
-        //
+
+        $training_resource = Training_Resource::find($id);
+        return $training_resource;
+
     }
 
     /**
