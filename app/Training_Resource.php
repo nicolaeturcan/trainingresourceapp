@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Training_Resource extends Model {
+class Training_Resource extends Model
+{
 
     public $timestamps = false;
 
@@ -18,6 +19,21 @@ class Training_Resource extends Model {
      * @var string
      */
     protected $primaryKey = 'training_resource_id';
+
+    /**
+     * The name of the "created at" column.
+     *
+     * @var string
+     */
+    const CREATED_AT = 'training_resource_entryDate';
+
+    /**
+     * The name of the "updated at" column.
+     *
+     * @var string
+     */
+    const UPDATED_AT = 'training_resource_last_update';
+
 
 
     protected $fillable = array('training_resource_name', 'training_resource_short_name',
