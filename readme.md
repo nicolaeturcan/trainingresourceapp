@@ -2,7 +2,7 @@
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
 [![Version](http://img.shields.io/packagist/v/nt/trainingresourceapp.svg?style=flat)](https://packagist.org/packages/nt/trainingresourceapp)
-[![Total Downloads](http://img.shields.io/packagist/dm/doctrine/orm.svg
+[![Total Downloads](http://img.shields.io/packagist/nt/trainingresourceapp/orm.svg
 )](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/nt/trainingresourceapp)
 
