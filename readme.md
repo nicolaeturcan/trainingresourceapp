@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
+[![Version](http://img.shields.io/packagist/v/nt/trainingresourceapp.svg?style=flat)](https://packagist.org/packages/nt/trainingresourceapp)
+
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
