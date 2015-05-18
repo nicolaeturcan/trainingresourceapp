@@ -5,8 +5,7 @@
 [![Build Status](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
 [![Dependency Status](https://img.shields.io/david/nicolaeturcan/trainingresourceapp.svg)](https://david-dm.org/nicolaeturcan/trainingresourceapp)
-[![License](https://img.shields.io/github/license/trainingresourceapp/trainingresourceapp.svg)](https://github.com/nicolaeturcan/trainingresourceapp)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nicolaeturcan/trainingresourceapp/master/LICENSE)
+[![License](https://img.shields.io/github/license/nicolaeturcan/trainingresourceapp.svg)](https://raw.githubusercontent.com/nicolaeturcan/trainingresourceapp/master/LICENSE)
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
