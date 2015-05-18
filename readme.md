@@ -2,9 +2,9 @@
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
 [![Version](http://img.shields.io/packagist/v/nt/trainingresourceapp.svg?style=flat)](https://packagist.org/packages/nt/trainingresourceapp)
-[![Total Downloads](https://img.shields.io/packagist/nt/trainingresourceapp/orm.svg
-)](https://packagist.org/packages/nt/trainingresourceapp)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/nt/trainingresourceapp)
+[![Build Status](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/build-status/master)
+[![Code Coverage](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
+[![License](https://img.shields.io/github/license/trainingresourceapp/trainingresourceapp.svg)](https://github.com/nicolaeturcan/trainingresourceapp)
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
