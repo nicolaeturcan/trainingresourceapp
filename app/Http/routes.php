@@ -15,7 +15,9 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-//Route::resource('api/todos','TodosController');
+Route::get('api/training_resource/parentResourceId/{id}', 'Training_Resource_Controller@showChild');
+
+//Route::get('api/training_resource/resourceId/{id}', 'Training_Resource_Controller@showParent');
 
 Route::resource('api/training_resource','Training_Resource_Controller');
 

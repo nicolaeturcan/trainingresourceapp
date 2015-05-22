@@ -55,6 +55,30 @@ class Training_Resource_Controller extends Controller
 
     }
 
+    public function showChild($id){
+
+        return Training_Resource::where('training_resource_parentResourceId', '=', $id)
+            ->get();
+
+    }
+
+    /*public function showParent($id){
+
+        //(SELECT training_resource_id, training_resource_name,training_resource_parentResourceId FROM training_resource WHERE training_resource_id=6) UNION
+        //(SELECT training_resource_id, training_resource_name,training_resource_parentResourceId FROM training_resource WHERE training_resource_parentResourceId=
+        //(SELECT training_resource_parentResourceId FROM training_resource WHERE training_resource_id=6));
+
+        $childId = Training_Resource::find($id);
+
+        $subQueryParentId = Training_Resource::WHERE('training_resource_id', '=', $id)->select(array('training_resource_parentResourceId'))->get();
+
+        $brothersId = Training_Resource::where('training_resource_parentResourceId', '=', $subQueryParentId);
+        $combined = $childId->union($brothersId);
+
+        return $combined;
+
+    }*/
+
     /**
      * Show the form for editing the specified resource.
      *
