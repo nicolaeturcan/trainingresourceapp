@@ -14,6 +14,8 @@ class Training_Resource_Controller extends Controller
      */
     public function index()
     {
+        /*if (Input::has('parentResourceId')) {
+        $filters = Input::only('training_resource_parentResourceId' == $id);*/
         $training_resources = Training_Resource::all();
         return $training_resources;
     }
