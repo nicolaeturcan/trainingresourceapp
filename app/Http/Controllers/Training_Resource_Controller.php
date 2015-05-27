@@ -15,8 +15,12 @@ class Training_Resource_Controller extends Controller
     public function index()
     {
         $training_resources = new Training_Resource;
-        if (Input::get('training_resource_parentResourceId'))
-            $training_resources = $training_resources::where('training_resource_parentResourceId', '=', Input::get('training_resource_parentResourceId'));
+
+        $id = Input::get('training_resource_parentResourceId');
+
+        if ($id || ($id == 0))
+            $training_resources = $training_resources::where('training_resource_parentResourceId', '=', $id);
+
         return $training_resources->get();
 
     }
