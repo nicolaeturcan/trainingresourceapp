@@ -10,18 +10,20 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use App\Training_Resource;
 
 Route::get('/', 'WelcomeController@index');
 
+
 Route::get('home', 'HomeController@index');
 
-Route::get('api/training_resource/parentResourceId/{id}', 'Training_Resource_Controller@showChild');
+Route::get('api/training_resource/parentid/{id}', function ($id) {
+    return Training_Resource::where('training_resource_parentResourceId', '=', $id)->get();
+});
 
-//Route::get('api/training_resource/resourceId/{id}', 'Training_Resource_Controller@showParent');
-
-Route::resource('api/training_resource','Training_Resource_Controller');
+Route::resource('api/training_resource', 'Training_Resource_Controller');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
