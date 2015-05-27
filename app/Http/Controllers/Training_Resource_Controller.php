@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Training_Resource;
+use Illuminate\Support\Facades\Input;
 use Request;
 
 class Training_Resource_Controller extends Controller
@@ -14,8 +14,11 @@ class Training_Resource_Controller extends Controller
      */
     public function index()
     {
-        $training_resources = Training_Resource::all();
-        return $training_resources;
+        $training_resources = new Training_Resource;
+        if (Input::get('training_resource_parentResourceId'))
+            $training_resources = $training_resources::where('training_resource_parentResourceId', '=', Input::get('training_resource_parentResourceId'));
+        return $training_resources->get();
+
     }
 
     /**
