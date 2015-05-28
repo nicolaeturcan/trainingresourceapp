@@ -74,7 +74,6 @@ class TrainingResourceTableSeeder extends Seeder
             array('training_resource_id' => '31', 'training_resource_name' => 'Integració social (LOGSE)', 'training_resource_short_name' => 'integracio_social', 'training_resource_description' => 'Cicle Formatiu de Grau Superior', 'training_resource_thumbnail' => 'img/thumbnail/logo_10_sociocultural.png', 'training_resource_external_url' => 'http://www.iesebre.com/index.php/2011-10-28-13-41-40/cfgs', 'training_resource_parentResourceId' => '30', 'training_resource_softDeleted' => 'false', 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
             array('training_resource_id' => '32', 'training_resource_name' => 'Educació infantil (LOE)', 'training_resource_short_name' => 'integracio_infantil', 'training_resource_description' => 'Cicle Formatiu de Grau Superior', 'training_resource_thumbnail' => 'img/thumbnail/logo_10_sociocultural.png', 'training_resource_external_url' => 'http://www.iesebre.com/index.php/2011-10-28-13-41-40/cfgs', 'training_resource_parentResourceId' => '30', 'training_resource_softDeleted' => 'false', 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
-
         ));
     }
 }
