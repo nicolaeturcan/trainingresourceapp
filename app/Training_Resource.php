@@ -1,8 +1,8 @@
 <?php namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use SleepingOwl\Models\SleepingOwlModel;
 
-class Training_Resource extends Model
+class Training_Resource extends SleepingOwlModel
 {
 
     public $timestamps = false;
