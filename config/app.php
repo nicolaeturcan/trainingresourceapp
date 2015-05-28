@@ -147,6 +147,9 @@ return [
 		
 		// CORS https://github.com/barryvdh/laravel-cors
 		'Barryvdh\Cors\CorsServiceProvider',
+		
+		'SleepingOwl\Admin\AdminServiceProvider',
+        	'Illuminate\Html\HtmlServiceProvider',
 
 	],
 
@@ -195,7 +198,17 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-
+		
+		 'Admin'             => 'SleepingOwl\Admin\Admin',
+		 'AdminAuth'         => 'SleepingOwl\AdminAuth\Facades\AdminAuth',
+		 'AdminRouter'       => 'SleepingOwl\Admin\Facades\AdminRouter',
+		 'AssetManager'      => 'SleepingOwl\Admin\AssetManager\AssetManager',
+		 'Column'            => 'SleepingOwl\Admin\Columns\Column',
+		 'FormItem'          => 'SleepingOwl\Admin\Models\Form\FormItem',
+		 'ModelItem'         => 'SleepingOwl\Admin\Models\ModelItem',
+		 
+		 'Form'      => 'Illuminate\Html\FormFacade',
+		 'Html'      => 'Illuminate\Html\HtmlFacade',
 	],
 
 ];
