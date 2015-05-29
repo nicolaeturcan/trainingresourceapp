@@ -5,12 +5,15 @@ Admin::model('\App\Training_Resource')->title('Recursos de formació')->with()->
 
 })->columns(function ()
 {
-	Column::string('training_resource_name', 'Training_resource_name');
-	Column::string('training_resource_short_name', 'Training_resource_short_name');
-	Column::string('training_resource_description', 'Training_resource_description');
-	Column::string('training_resource_thumbnail', 'Training_resource_thumbnail');
-	Column::string('training_resource_external_url', 'Training_resource_external_url');
-	Column::string('training_resource_parentResourceId', 'Training_resource_parentResourceId');
+
+    Column::string('training_resource_thumbnail');
+    Column::string('training_resource_id', 'ID');
+	Column::string('training_resource_name', 'Nom');
+	//Column::string('training_resource_short_name', 'Training_resource_short_name');
+	Column::string('training_resource_description', 'Descripció');
+	Column::string('training_resource_external_url', 'URL');
+	Column::string('training_resource_parentResourceId', 'Pare')->append(Column::filter('training_resource')->value('training_resource_id'));;
+
 })->form(function ()
 {
 	FormItem::text('training_resource_name', 'Training Resource Name');
