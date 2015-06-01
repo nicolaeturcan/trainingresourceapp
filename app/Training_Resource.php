@@ -1,11 +1,16 @@
 <?php namespace App;
 
+use SleepingOwl\Models\Interfaces\ModelWithImageFieldsInterface;
 use SleepingOwl\Models\SleepingOwlModel;
+use SleepingOwl\Models\Traits\ModelWithImageOrFileFieldsTrait;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-class Training_Resource extends SleepingOwlModel
+class Training_Resource extends SleepingOwlModel implements ModelWithImageFieldsInterface
 {
+    //use ModelWithImageOrFileFieldsTrait;
 
     public $timestamps = false;
+
 
     /**
      * The database table used by the model.
@@ -14,11 +19,13 @@ class Training_Resource extends SleepingOwlModel
      */
     protected $table = 'training_resource';
 
+
     /**
      * Primary key of the table
      * @var string
      */
     protected $primaryKey = 'training_resource_id';
+
 
     /**
      * The name of the "created at" column.
@@ -26,6 +33,7 @@ class Training_Resource extends SleepingOwlModel
      * @var string
      */
     const CREATED_AT = 'training_resource_entryDate';
+
 
     /**
      * The name of the "updated at" column.
@@ -35,15 +43,53 @@ class Training_Resource extends SleepingOwlModel
     const UPDATED_AT = 'training_resource_last_update';
 
 
+    protected $fillable = [
+        'training_resource_name',
+        'training_resource_short_name',
+        'training_resource_description',
+        'training_resource_thumbnail',
+        'training_resource_external_url',
+        'training_resource_softDeleted'
+    ];
 
-    protected $fillable = array('training_resource_name', 'training_resource_short_name',
-        'training_resource_description', 'training_resource_thumbnail', 'training_resource_external_url',
-        'training_resource_softDeleted');
+
+    protected $hidden = [
+        'training_resource_entryDate',
+        'training_resource_last_update'
+    ];
+
+
+    /**
+     * Get array of image field names and its directories within images folder
+     *
+     * Keys of array is image field names
+     * Values is their directories
+     *
+     * @return string[]
+     */
+
+    public function getImageFields()
+    {
+        return [
+            'training_resource_thumbnail' => 'training_resource/'
+        ];
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo('\App\Training_Resource', 'training_resource_parentResourceId');
+    }
+
+    public function children()
+    {
+        return $this->hasMany('\App\Training_Resource', 'training_resource_parentResourceId');
+    }
+
+    public static function getList()
+    {
+        return static::lists('training_resource_name', 'training_resource_id');
+    }
+
+
+
 }
-
-//, 'training_resource_last_update'
-//, 'training_resource_creationUserId'
-//, 'training_resource_lastupdateUserId'
-//, 'training_resource_entryDate'
-//, 'training_resource_softDeletedDate'
-//, 'training_resource_parentResourceId'

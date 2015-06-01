@@ -17,7 +17,6 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-
 /*Route::get('api/training_resource/parentid/{id}', function ($id) {
     return Training_Resource::where('training_resource_parentResourceId', '=', $id)->get();
 });*/
