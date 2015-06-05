@@ -20,20 +20,16 @@ Admin::model('\App\Training_Resource')->title('Recursos de formació')->with()->
 	FormItem::text('training_resource_short_name', 'Nom Curt');
 	//FormItem::image('training_resource_thumbnail', 'Foto');
 	FormItem::text('training_resource_external_url', 'URL Externa');
-    //FormItem::select('parent.training_resource_name', 'Pare')->list('\Country')->required();
-
     FormItem::select('training_resource_id', 'Pare')->list('\App\Training_Resource')->required();
-	FormItem::date('training_resource_entryDate', 'Training Resource Entry Date');//->seconds(true);
-	FormItem::date('training_resource_last_update', 'Training Resource Last Update');//->seconds(true);
-    FormItem::ckeditor('training_resource_description', 'Description')->required();
-
+	//FormItem::timestamp('training_resource_entryDate', 'Data Creació');//->seconds(true);
+	//FormItem::timestamp('training_resource_last_update', 'Data de l\'última modificació');//->seconds(true);
+    FormItem::checkbox('training_resource_softDeleted', 'SoftDeleted');
+    FormItem::ckeditor('training_resource_description', 'Descripció');
 
 
 
 	//FormItem::text('training_resource_creationUserId', 'Training Resource Creation User Id');
 	//FormItem::text('training_resource_lastupdateUserId', 'Training Resource Lastupdate User Id');
-
-    //FormItem::checkbox('training_resource_softDeleted', 'Training Resource Soft Deleted');
 
     //FormItem::timestamp('training_resource_softDeletedDate', 'Training Resource Soft Deleted Date');//->seconds(true);
 });

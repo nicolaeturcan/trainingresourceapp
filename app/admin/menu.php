@@ -16,4 +16,4 @@
  */
 
 Admin::menu()->url('/')->label('Start page')->icon('fa-dashboard')->uses('\SleepingOwl\Admin\Controllers\DummyController@getIndex');
-Admin::menu('\App\Training_Resource');
+Admin::menu('\App\Training_Resource')->icon('fa-globe');

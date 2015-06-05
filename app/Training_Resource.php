@@ -9,7 +9,7 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
 {
     //use ModelWithImageOrFileFieldsTrait;
 
-    public $timestamps = false;
+    public $timestamps = true;
 
 
     /**
@@ -84,12 +84,14 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
     {
         return $this->hasMany('\App\Training_Resource', 'training_resource_parentResourceId');
     }
-
     public static function getList()
     {
         return static::lists('training_resource_name', 'training_resource_id');
     }
 
-
+    public function getDates()
+    {
+        return array_merge(parent::getDates(), ['training_resource_entryDate','training_resource_last_update']);
+    }
 
 }
