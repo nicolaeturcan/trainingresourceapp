@@ -1,8 +1,8 @@
 ## Laravel PHP Framework
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
-[![Version](https://img.shields.io/packagist/v/nt/trainingresourceapp.svg)](https://packagist.org/packages/nt/trainingresourceapp)
 [![Build Status](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/build-status/master)
+[![Version](https://img.shields.io/packagist/v/nt/trainingresourceapp.svg)](https://packagist.org/packages/nt/trainingresourceapp)
 [![Code Coverage](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
 [![Dependency Status](https://img.shields.io/david/nicolaeturcan/trainingresourceapp.svg)](https://david-dm.org/nicolaeturcan/trainingresourceapp)
 [![License](https://img.shields.io/github/license/nicolaeturcan/trainingresourceapp.svg)](https://raw.githubusercontent.com/nicolaeturcan/trainingresourceapp/master/LICENSE)
