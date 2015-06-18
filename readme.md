@@ -8,22 +8,24 @@
 [![Dependency Status](https://img.shields.io/david/nicolaeturcan/trainingresourceapp.svg)](https://david-dm.org/nicolaeturcan/trainingresourceapp)
 [![License](https://img.shields.io/github/license/nicolaeturcan/trainingresourceapp.svg)](https://raw.githubusercontent.com/nicolaeturcan/trainingresourceapp/master/LICENSE)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Tot Formació és una aplicació multiplataforma amb l'objectiu de fàcilitar informació sobre les formacións professionals que puguis trobar a diversos instituts i altres entitats de les Terres de l'Ebre.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+## Documentació del projecte
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+La documentació del projecte la podem trobar a la [wiki](http://acacha.org/mediawiki/Usuari:TNicolae/App_formaci%C3%B3_TE).
 
-## Contributing
+## Aplicació Ionic
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+El codi Font de l'aplicació Ionic que utilitza aquesta API se pot trobar aquí al mateix [Github](https://github.com/nicolaeturcan/trainingresourceapp).
 
-## Security Vulnerabilities
+Podem instal·lar l'aplicació des del [Google Play Console](https://play.google.com/store/apps/details?id=com.iesebre.dam2.pa201415.formapp).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Presentació del projecte
+El codi font de la presentació del projecte la podem trobar al [Github](https://github.com/nicolaeturcan/TrainingResourcePresentation/tree/gh-pages).
 
-### License
+O podem anar directament a la Demo de la presentació publicada amb [Github Pages](http://nicolaeturcan.github.io/TrainingResourcePresentation/#/).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+
