@@ -51,7 +51,6 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
         'training_resource_external_url',
         'training_resource_softDeleted',
         'training_resource_parentResourceId'
-
     ];
 
 
@@ -73,10 +72,7 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
     public function getImageFields()
     {
         return [
-            'training_resource_thumbnail' => ['/', function($directory, $originalName, $extension)
-            {
-                return $originalName;
-            }]
+            'training_resource_thumbnail' => '/'
         ];
     }
 
