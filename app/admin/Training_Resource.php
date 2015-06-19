@@ -18,9 +18,9 @@ Admin::model('\App\Training_Resource')->title('Recursos de formació')->with()->
 {
 	FormItem::text('training_resource_name', 'Nom')->required();
 	FormItem::text('training_resource_short_name', 'Nom Curt');
-	//FormItem::image('training_resource_thumbnail', 'Foto');
+	FormItem::image('training_resource_thumbnail', 'Imatge');
 	FormItem::text('training_resource_external_url', 'URL Externa');
-    FormItem::select('training_resource_id', 'Pare')->list('\App\Training_Resource')->required();
+    FormItem::select('training_resource_id', 'Pare')->list('\App\Training_Resource');
 	//FormItem::timestamp('training_resource_entryDate', 'Data Creació');//->seconds(true);
 	//FormItem::timestamp('training_resource_last_update', 'Data de l\'última modificació');//->seconds(true);
     FormItem::checkbox('training_resource_softDeleted', 'SoftDeleted');

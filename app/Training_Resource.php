@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class Training_Resource extends SleepingOwlModel implements ModelWithImageFieldsInterface
 {
-    //use ModelWithImageOrFileFieldsTrait;
+    use ModelWithImageOrFileFieldsTrait;
 
     public $timestamps = true;
 
@@ -71,7 +71,10 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
     public function getImageFields()
     {
         return [
-            'training_resource_thumbnail' => 'training_resource/'
+            'training_resource_thumbnail' => ['/', function($directory, $originalName, $extension)
+            {
+                return $originalName;
+            }]
         ];
     }
 
