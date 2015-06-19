@@ -49,7 +49,9 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
         'training_resource_description',
         'training_resource_thumbnail',
         'training_resource_external_url',
-        'training_resource_softDeleted'
+        'training_resource_softDeleted',
+        'training_resource_parentResourceId'
+
     ];
 
 
@@ -85,7 +87,7 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
 
     public function children()
     {
-        return $this->hasMany('\App\Training_Resource', 'training_resource_parentResourceId');
+        return $this->hasMany('\App\Training_Resource', 'training_resource_id');
     }
     public static function getList()
     {
@@ -95,6 +97,13 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
     public function getDates()
     {
         return array_merge(parent::getDates(), ['training_resource_entryDate','training_resource_last_update']);
+    }
+    public function pare($pare)
+    {
+        $this->training_resource()->detach();
+        if ( ! $pare) return;
+        if ( ! $this->exists) $this->save();
+        $this->training_resource()->attach($pare);
     }
 
 }
