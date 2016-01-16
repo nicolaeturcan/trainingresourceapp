@@ -1,35 +1,44 @@
 <?php
 
-Admin::model('\App\Training_Resource')->title('Recursos de formació')->with()->filters(function ()
+use App\Training_Resource;
+use App\Training_Resource_Tree;
+
+Admin::model(Training_Resource::class)->alias('training_resources')->title(trans_choice('admin::lang.trainings.title', 1))->display(function ()
 {
+    $display = AdminDisplay::tabbed();
 
-})->columns(function ()
+    $display->tabs(function ()
+    {
+        $tabs = [];
+
+        $main = AdminDisplay::datatables();
+        $columns = [
+            Column::string('training_resource_id')->label(trans_choice('admin::lang.trainings.id', 1)),
+            Column::image('training_resource_thumbnail')->label(trans_choice('admin::lang.trainings.thumbnail', 1)),
+            Column::string('training_resource_name')->label(trans_choice('admin::lang.trainings.title', 1)),
+            Column::custom()->label(trans_choice('admin::lang.trainings.description', 1))->callback(function ($instance) {
+                return $instance->training_resource_description;
+            }),
+            Column::string('parent.training_resource_name')->label(trans_choice('admin::lang.trainings.parent', 1)),
+        ];
+
+        $main->columns($columns);
+        $tabs[] = AdminDisplay::tab($main)->label('Main')->active(true);
+
+        $tree = Admin::model(Training_Resource_Tree::class)->display();
+        $tabs[] = AdminDisplay::tab($tree)->label('Tree');
+
+        return $tabs;
+    });
+    return $display;
+})->createAndEdit(function ()
 {
-    //Column::image('training_resource_thumbnail');
-    Column::string('training_resource_id', 'ID');
-	Column::string('training_resource_name', 'Nom');
-	//Column::string('training_resource_short_name', 'Nom Curt');
-	Column::string('training_resource_description', 'Descripció');
-	//Column::string('training_resource_external_url', 'URL');
-    //Column::string('training_resource_name', 'Pare')->append(Column::where('training_resource_id', '=', 'training_resource_parentResourceId'));
-    Column::string('parent.training_resource_name', 'Pare');
-
-})->form(function ()
-{
-	FormItem::text('training_resource_name', 'Nom')->required();
-	FormItem::text('training_resource_short_name', 'Nom Curt');
-	FormItem::image('training_resource_thumbnail', 'Imatge');
-	FormItem::text('training_resource_external_url', 'URL Externa');
-    FormItem::select('training_resource_parentResourceId', 'Pare')->list('\App\Training_Resource')->nullable();
-	//FormItem::timestamp('training_resource_entryDate', 'Data Creació');//->seconds(true);
-	//FormItem::timestamp('training_resource_last_update', 'Data de l\'última modificació');//->seconds(true);
-    FormItem::checkbox('training_resource_softDeleted', 'SoftDeleted');
-    FormItem::ckeditor('training_resource_description', 'Descripció');
-
-
-
-	//FormItem::text('training_resource_creationUserId', 'Training Resource Creation User Id');
-	//FormItem::text('training_resource_lastupdateUserId', 'Training Resource Lastupdate User Id');
-
-    //FormItem::timestamp('training_resource_softDeletedDate', 'Training Resource Soft Deleted Date');//->seconds(true);
+    $form = AdminForm::form();
+    $form->items([
+        FormItem::text('training_resource_name', trans_choice('admin::lang.trainings.title', 1))->required(),
+        FormItem::select('training_resource_parentResourceId', trans_choice('admin::lang.trainings.parent', 1))->model(Training_Resource::class)->display('training_resource_name')->nullable(),
+        FormItem::image('training_resource_thumbnail', trans_choice('admin::lang.trainings.thumbnail', 1)),
+        FormItem::ckeditor('training_resource_description', trans_choice('admin::lang.trainings.description', 1)),
+    ]);
+    return $form;
 });

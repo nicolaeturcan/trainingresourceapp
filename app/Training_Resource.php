@@ -1,16 +1,13 @@
 <?php namespace App;
 
-use SleepingOwl\Models\Interfaces\ModelWithImageFieldsInterface;
-use SleepingOwl\Models\SleepingOwlModel;
-use SleepingOwl\Models\Traits\ModelWithImageOrFileFieldsTrait;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Baum\Node;
 
-class Training_Resource extends SleepingOwlModel implements ModelWithImageFieldsInterface
+class Training_Resource extends Node
 {
-    use ModelWithImageOrFileFieldsTrait;
-
+    /**
+     * @var bool
+     */
     public $timestamps = true;
-
 
     /**
      * The database table used by the model.
@@ -19,6 +16,10 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
      */
     protected $table = 'training_resource';
 
+    /**
+     * @var string
+     */
+    protected $parentColumn = 'training_resource_parentResourceId';
 
     /**
      * Primary key of the table
@@ -26,23 +27,47 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
      */
     protected $primaryKey = 'training_resource_id';
 
+    /**
+     * 'lft' column name
+     * @var string
+     */
+    protected $leftColumn = 'training_resource_lft';
+
+    /**
+     * 'rgt' column name
+     * @var string
+     */
+    protected $rightColumn = 'training_resource_rgt';
+
+    /**
+     * 'depth' column name
+     * @var string
+     */
+    protected $depthColumn = 'training_resource_depth';
+
+    /**
+     * Guard attributes from mass-assignment
+     * @var array
+     */
+    protected $guarded = ['training_resource_id', 'training_resource_parentResourceId', 'training_resource_lft', 'training_resource_rgt', 'training_resource_depth'];
 
     /**
      * The name of the "created at" column.
      *
      * @var string
      */
-    const CREATED_AT = 'training_resource_entryDate';
-
+    const CREATED_AT = 'training_resource_created_at';
 
     /**
      * The name of the "updated at" column.
      *
      * @var string
      */
-    const UPDATED_AT = 'training_resource_last_update';
+    const UPDATED_AT = 'training_resource_updated_at';
 
-
+    /**
+     * @var array
+     */
     protected $fillable = [
         'training_resource_name',
         'training_resource_short_name',
@@ -53,28 +78,13 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
         'training_resource_parentResourceId'
     ];
 
-
+    /**
+     * @var array
+     */
     protected $hidden = [
         'training_resource_entryDate',
         'training_resource_last_update'
     ];
-
-
-    /**
-     * Get array of image field names and its directories within images folder
-     *
-     * Keys of array is image field names
-     * Values is their directories
-     *
-     * @return string[]
-     */
-
-    public function getImageFields()
-    {
-        return [
-            'training_resource_thumbnail' => '/'
-        ];
-    }
 
     public function parent()
     {
@@ -85,21 +95,4 @@ class Training_Resource extends SleepingOwlModel implements ModelWithImageFields
     {
         return $this->hasMany('\App\Training_Resource', 'training_resource_id');
     }
-    public static function getList()
-    {
-        return static::lists('training_resource_name', 'training_resource_id');
-    }
-
-    public function getDates()
-    {
-        return array_merge(parent::getDates(), ['training_resource_entryDate','training_resource_last_update']);
-    }
-    public function pare($pare)
-    {
-        $this->training_resource()->detach();
-        if ( ! $pare) return;
-        if ( ! $this->exists) $this->save();
-        $this->training_resource()->attach($pare);
-    }
-
 }

@@ -52,7 +52,7 @@ return [
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'ca',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
 	|
 	*/
 
-	'fallback_locale' => 'en',
+	'fallback_locale' => 'ca',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -136,7 +136,7 @@ return [
 		Illuminate\Validation\ValidationServiceProvider::class,
 		Illuminate\View\ViewServiceProvider::class,
 		Illuminate\Broadcasting\BroadcastServiceProvider::class,
-        Illuminate\Html\HtmlServiceProvider::class,
+        //Illuminate\Html\HtmlServiceProvider::class,
 
 		/*
 		 * Application Service Providers...
@@ -151,7 +151,8 @@ return [
 		Barryvdh\Cors\CorsServiceProvider::class,
 		
 		SleepingOwl\Admin\AdminServiceProvider::class,
-
+        SleepingOwl\AdminLteTemplate\AdminLteTemplateServiceProvider::class,
+        Baum\Providers\BaumServiceProvider::class,
 	],
 
 	/*
@@ -199,17 +200,22 @@ return [
 		'URL'       => Illuminate\Support\Facades\URL::class,
 		'Validator' => Illuminate\Support\Facades\Validator::class,
 		'View'      => Illuminate\Support\Facades\View::class,
-		
-		 'Admin'             => 'SleepingOwl\Admin\Admin',
-		 'AdminAuth'         => 'SleepingOwl\AdminAuth\Facades\AdminAuth',
-		 'AdminRouter'       => 'SleepingOwl\Admin\Facades\AdminRouter',
-		 'AssetManager'      => 'SleepingOwl\Admin\AssetManager\AssetManager',
-		 'Column'            => 'SleepingOwl\Admin\Columns\Column',
-		 'FormItem'          => 'SleepingOwl\Admin\Models\Form\FormItem',
-		 'ModelItem'         => 'SleepingOwl\Admin\Models\ModelItem',
-		 
-		 'Form'      => 'Illuminate\Html\FormFacade',
-		 'Html'      => 'Illuminate\Html\HtmlFacade',
+
+//        'Form'      => Illuminate\Html\FormFacade::class,
+//        'Html'      => Illuminate\Html\HtmlFacade::class,
+
+        /*
+        * Sleeping Owl Admin Service Providers (http://sleeping-owl.github.io/v3/en/Getting_Started/Installation.html)...
+        */
+        'Admin'         => SleepingOwl\Admin\Admin::class,
+        'AdminAuth'     => SleepingOwl\AdminAuth\Facades\AdminAuth::class,
+        'Column'        => SleepingOwl\Admin\Columns\Column::class,
+        'ColumnFilter'  => SleepingOwl\Admin\ColumnFilters\ColumnFilter::class,
+        'Filter'        => SleepingOwl\Admin\Filter\Filter::class,
+        'AdminDisplay'  => SleepingOwl\Admin\Display\AdminDisplay::class,
+        'AdminForm'     => SleepingOwl\Admin\Form\AdminForm::class,
+        'AdminTemplate' => SleepingOwl\Admin\Templates\Facade\AdminTemplate::class,
+        'FormItem'      => SleepingOwl\Admin\FormItems\FormItem::class,
 	],
 
 ];

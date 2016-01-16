@@ -1,5 +1,6 @@
 <?php
 
+use App\Training_Resource;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -20,13 +21,19 @@ class CreateTrainingResourceTable extends Migration {
             $table->string('training_resource_description');
             $table->string('training_resource_thumbnail');
             $table->string('training_resource_external_url');
-            $table->integer('training_resource_parentResourceId');
-            $table->dateTime('training_resource_entryDate');
-            $table->dateTime('training_resource_last_update');
-            $table->integer('training_resource_creationUserId');
-            $table->integer('training_resource_lastupdateUserId');
-            $table->boolean('training_resource_softDeleted');
-            $table->dateTime('training_resource_softDeletedDate');
+            # BAUM columns
+            $table->integer('training_resource_parentResourceId')->nullable();
+            $table->integer('training_resource_lft')->nullable();
+            $table->integer('training_resource_rgt')->nullable();
+            $table->integer('training_resource_depth')->nullable();
+            # Timestamps
+            $table->timestamp(Training_Resource::CREATED_AT);
+            $table->timestamp(Training_Resource::UPDATED_AT);
+            $table->timestamp('training_resource_deleted_at');
+            # User Tracking
+            $table->integer('training_resource_created_by');
+            $table->integer('training_resource_updated_by');
+            $table->integer('training_resource_deleted_by');
 		});
 	}
 
@@ -37,10 +44,7 @@ class CreateTrainingResourceTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('training_resource', function(Blueprint $table)
-		{
-			//
-		});
+		Schema::dropIfExists('training_resource');
 	}
 
 }

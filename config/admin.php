@@ -5,7 +5,7 @@ return [
 	 * Admin title
 	 * Displays in page title and header
 	 */
-	'title'                 => 'Sleeping Owl administrator',
+	'title'                 => 'Formació TE',
 
 	/*
 	 * Admin url prefix
@@ -39,13 +39,13 @@ return [
 	 * Path to images upload directory within 'imagesDirectory'
 	 * Default: 'uploads'
 	 */
-	'imagesUploadDirectory' => 'uploads',
+	'imagesUploadDirectory' => 'images',
 
 	/*
 	 * Authentication config
 	 */
 	'auth'                  => [
-		'model'  => '\SleepingOwl\AdminAuth\Entities\Administrator',
+		'model'  => SleepingOwl\AdminAuth\Entities\Administrator::class,
 		'rules' => [
 			'username' => 'required',
 			'password' => 'required',
@@ -56,4 +56,9 @@ return [
 	 * Blade template prefix, default admin::
 	 */
     'bladePrefix'                => 'admin::',
+
+	/*
+	 * Sets the Admin template
+	 */
+	'template'		=> SleepingOwl\AdminLteTemplate\Template::class,
 ];
