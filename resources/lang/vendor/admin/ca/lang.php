@@ -97,10 +97,14 @@ return [
 
 	# TrainingResource Model Translations
 	'trainings'             => [
-		'id'		        => 'ID',
 		'title'		        => 'Recursos de formació',
+		'main_tab'			=> 'Registres',
+		'second_tab'		=> 'Arbre',
+		'id'		        => 'ID',
+		'name'		        => 'Formació',
 		'description'		=> 'Descripció',
 		'parent'		    => 'Recurs Pare',
         'thumbnail'         => 'Imatge',
+        'url'         		=> 'Url',
 	],
 ];
