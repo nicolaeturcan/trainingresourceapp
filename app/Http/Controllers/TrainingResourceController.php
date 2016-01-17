@@ -18,7 +18,9 @@ class TrainingResourceController extends Controller
 
         $parent_id = Input::get('parent_id');
 
-        if ($parent_id || ($parent_id == 0)) {
+        if ($parent_id == 0) {
+            $training_resources = $training_resources::where('parent_id', '=', NULL);
+        }else{
             $training_resources = $training_resources::where('parent_id', '=', $parent_id);
         }
 
