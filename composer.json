@@ -10,6 +10,7 @@
 		"sleeping-owl/admin": "dev-development",
 		"sleeping-owl/admin-lte-template": "dev-master",
 		"baum/baum": "~1.1",
+		"orangehill/iseed": "dev-master",
 		"caouecs/laravel4-lang": "~2.0",
 		"overtrue/laravel-lang": "dev-master"
 	},

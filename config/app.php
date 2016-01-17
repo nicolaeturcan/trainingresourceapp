@@ -153,6 +153,7 @@ return [
 		SleepingOwl\Admin\AdminServiceProvider::class,
         SleepingOwl\AdminLteTemplate\AdminLteTemplateServiceProvider::class,
         Baum\Providers\BaumServiceProvider::class,
+		Orangehill\Iseed\IseedServiceProvider::class,
 	],
 
 	/*

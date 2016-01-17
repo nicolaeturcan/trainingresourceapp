@@ -15,6 +15,9 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::resource('api/training_resource', 'Training_Resource_Controller');
+Route::resource('api/training_resource', 'TrainingResourceController');
 
 Route::controllers(['auth' => 'Auth\AuthController', 'password' => 'Auth\PasswordController']);
+
+# Includes all the routes from test-routes.php
+include('test-routes.php');

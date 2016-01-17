@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8da22969ed5c80b102085b9e1d8fe6a",
-    "content-hash": "fddd8c37de8d45ba7f5c44655f2463e9",
+    "hash": "3b8ccdefad89c49f5c82c27f3d403b18",
+    "content-hash": "70f9ee8f37ce2b20dd52b0f226062ca4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1381,6 +1381,55 @@
                 "php"
             ],
             "time": "2015-12-04 15:28:43"
+        },
+        {
+            "name": "orangehill/iseed",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orangehill/iseed.git",
+                "reference": "0886919f3f0f7513ec334af22beeddcb3f28b7e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orangehill/iseed/zipball/0886919f3f0f7513ec334af22beeddcb3f28b7e2",
+                "reference": "0886919f3f0f7513ec334af22beeddcb3f28b7e2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/filesystem": "5.x",
+                "mockery/mockery": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Orangehill\\Iseed": "src/"
+                },
+                "classmap": [
+                    "src/Orangehill/Iseed/Exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tihomir Opacic",
+                    "email": "tihomir.opacic@orangehilldev.com"
+                }
+            ],
+            "description": "Generate a new Laravel database seed file based on data from the existing database table.",
+            "keywords": [
+                "artisan",
+                "generators",
+                "laravel",
+                "seed"
+            ],
+            "time": "2015-03-19 09:48:32"
         },
         {
             "name": "overtrue/laravel-lang",
@@ -3667,6 +3716,7 @@
         "barryvdh/laravel-cors": 20,
         "sleeping-owl/admin": 20,
         "sleeping-owl/admin-lte-template": 20,
+        "orangehill/iseed": 20,
         "overtrue/laravel-lang": 20
     },
     "prefer-stable": false,

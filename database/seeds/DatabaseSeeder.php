@@ -16,8 +16,9 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call('AdministratorsSeeder');
-        $this->call('TrainingResourceTableSeeder');
+        //$this->call('OriginalTrainingResourceTableSeeder'); # deprecated
+        $this->call('TrainingResourcesTableSeeder');
 
         Model::reguard();
-    }
+	}
 }

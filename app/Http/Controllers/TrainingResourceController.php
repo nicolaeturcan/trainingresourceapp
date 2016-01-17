@@ -5,9 +5,8 @@ use Illuminate\Http\Response;
 use App\Models\TrainingResource;
 use Illuminate\Support\Facades\Input;
 
-class Training_Resource_Controller extends Controller
+class TrainingResourceController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -17,10 +16,11 @@ class Training_Resource_Controller extends Controller
     {
         $training_resources = new TrainingResource;
 
-        $id = Input::get('training_resource_parentResourceId');
+        $parent_id = Input::get('parent_id');
 
-        if ($id || ($id == 0))
-            $training_resources = $training_resources::where('training_resource_parentResourceId', '=', $id);
+        if ($parent_id || ($parent_id == 0)) {
+            $training_resources = $training_resources::where('parent_id', '=', $parent_id);
+        }
 
         return $training_resources->get();
 
@@ -79,12 +79,11 @@ class Training_Resource_Controller extends Controller
     public function update($id)
     {
         $training_resource = TrainingResource::find($id);
-        $training_resource->training_resource_name = Request::input('training_resource_name');
-        $training_resource->training_resource_short_name = Request::input('training_resource_short_name');
-        $training_resource->training_resource_description = Request::input('training_resource_description');
-        $training_resource->training_resource_thumbnail = Request::input('training_resource_thumbnail');
-        $training_resource->training_resource_external_url = Request::input('training_resource_external_url');
-        $training_resource->training_resource_softDeleted = Request::input('training_resource_softDeleted');
+        $training_resource->name = Request::input('name');
+        $training_resource->short_name = Request::input('short_name');
+        $training_resource->description = Request::input('description');
+        $training_resource->thumbnail = Request::input('thumbnail');
+        $training_resource->external_url = Request::input('external_url');
         $training_resource->save();
 
         return $training_resource;
