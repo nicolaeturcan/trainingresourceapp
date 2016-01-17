@@ -1,8 +1,8 @@
-<?php namespace App;
+<?php namespace App\Models;
 
 use Baum\Node;
 
-class Training_Resource extends Node
+class TrainingResource extends Node
 {
     /**
      * @var bool
@@ -86,13 +86,19 @@ class Training_Resource extends Node
         'training_resource_last_update'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function parent()
     {
-        return $this->belongsTo('\App\Training_Resource', 'training_resource_parentResourceId');
+        return $this->belongsTo(TrainingResource::class, 'training_resource_parentResourceId');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function children()
     {
-        return $this->hasMany('\App\Training_Resource', 'training_resource_id');
+        return $this->hasMany(TrainingResource::class, 'training_resource_id');
     }
 }

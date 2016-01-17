@@ -95,7 +95,7 @@ return [
 		'title'		=> 'Formació TE',
 	],
 
-	# Training_Resource Model Translations
+	# TrainingResource Model Translations
 	'trainings'             => [
 		'id'		        => 'ID',
 		'title'		        => 'Recursos de formació',

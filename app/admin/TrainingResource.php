@@ -1,9 +1,9 @@
 <?php
 
-use App\Training_Resource;
-use App\Training_Resource_Tree;
+use App\Models\TrainingResource;
+use App\Models\TrainingResourceTree;
 
-Admin::model(Training_Resource::class)->alias('training_resources')->title(trans_choice('admin::lang.trainings.title', 1))->display(function ()
+Admin::model(TrainingResource::class)->alias('training_resources')->title(trans_choice('admin::lang.trainings.title', 1))->display(function ()
 {
     $display = AdminDisplay::tabbed();
 
@@ -25,7 +25,7 @@ Admin::model(Training_Resource::class)->alias('training_resources')->title(trans
         $main->columns($columns);
         $tabs[] = AdminDisplay::tab($main)->label('Main')->active(true);
 
-        $tree = Admin::model(Training_Resource_Tree::class)->display();
+        $tree = Admin::model(TrainingResourceTree::class)->display();
         $tabs[] = AdminDisplay::tab($tree)->label('Tree');
 
         return $tabs;
@@ -36,7 +36,7 @@ Admin::model(Training_Resource::class)->alias('training_resources')->title(trans
     $form = AdminForm::form();
     $form->items([
         FormItem::text('training_resource_name', trans_choice('admin::lang.trainings.title', 1))->required(),
-        FormItem::select('training_resource_parentResourceId', trans_choice('admin::lang.trainings.parent', 1))->model(Training_Resource::class)->display('training_resource_name')->nullable(),
+        FormItem::select('training_resource_parentResourceId', trans_choice('admin::lang.trainings.parent', 1))->model(TrainingResource::class)->display('training_resource_name')->nullable(),
         FormItem::image('training_resource_thumbnail', trans_choice('admin::lang.trainings.thumbnail', 1)),
         FormItem::ckeditor('training_resource_description', trans_choice('admin::lang.trainings.description', 1)),
     ]);
