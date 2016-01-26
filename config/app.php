@@ -149,7 +149,7 @@ return [
 		'Barryvdh\Cors\CorsServiceProvider',
 		
 		'SleepingOwl\Admin\AdminServiceProvider',
-        	'Illuminate\Html\HtmlServiceProvider',
+		'Illuminate\Html\HtmlServiceProvider',
 
 	],
 
