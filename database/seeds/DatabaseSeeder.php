@@ -58,7 +58,7 @@ class TrainingResourceTableSeeder extends Seeder
                 'training_resource_id' => '3',
                 'training_resource_name' => 'Formació Ocupacional',
                 'training_resource_short_name' => 'admin_fin',
-                'training_resource_description' => 'Cursos per millorar la seva formació durant el període d\'atur i aconseguir una millor preparació per al món laboral',
+                'training_resource_description' => 'Cursos per millorar la seva formació durant el període d\'atur i aconseguir una millor preparació per al món laboral.',
                 'training_resource_thumbnail' => 'logo_formacio_ocupacional.png',
                 'training_resource_external_url' => '',
                 'training_resource_parentResourceId' => '0',
@@ -69,7 +69,7 @@ class TrainingResourceTableSeeder extends Seeder
                 'training_resource_id' => '4',
                 'training_resource_name' => 'Altres Formacions',
                 'training_resource_short_name' => 'altres_formacions',
-                'training_resource_description' => '',
+                'training_resource_description' => 'Cursos per a monitors de menjadors i directors de lleure infantil, activitats o tallers digitals.',
                 'training_resource_thumbnail' => 'logo_altres_formacions.png',
                 'training_resource_external_url' => '',
                 'training_resource_parentResourceId' => '0',
@@ -303,18 +303,29 @@ class TrainingResourceTableSeeder extends Seeder
                 'training_resource_softDeleted' => 'false',
                 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
-            array(
-                'training_resource_id' => '62',
-                'training_resource_name' => 'AULA 2000, SCP',
-                'training_resource_short_name' => 'aula-2000',
+
+            array('training_resource_id' => '62',
+                'training_resource_name' => 'UGT-IDFO',
+                'training_resource_short_name' => 'ugt',
                 'training_resource_description' => 'Formació contínua, formació ocupacional, formació subvencionada',
-                'training_resource_thumbnail' => 'default_thumbnail.png',
-                'training_resource_external_url' => 'http://www.aula2000.cat',
+                'training_resource_thumbnail' => 'logo_idfo_ugt.png',
+                'training_resource_external_url' => 'http://www.idfo.com/',
                 'training_resource_parentResourceId' => '2',
                 'training_resource_softDeleted' => 'false',
                 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
-            array('training_resource_id' => '63',
+            array(
+                'training_resource_id' => '63',
+                'training_resource_name' => 'CENTRE D\'ESTUDIS BAYERRI',
+                'training_resource_short_name' => 'centre-estudis-bayerri',
+                'training_resource_description' => 'Cursos de formació subvencionats: per a persones desocupades, joves inscrits al col·lectiu de Garantia Juvenil, persones en actiu. Cursos de formació contínua per a empreses i formació privada',
+                'training_resource_thumbnail' => 'logo_centre_estudis_bayerri.png',
+                'training_resource_external_url' => 'http://www.tortosa.com/bayerri/',
+                'training_resource_parentResourceId' => '2',
+                'training_resource_softDeleted' => 'false',
+                'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
+
+            array('training_resource_id' => '64',
                 'training_resource_name' => 'BRM L\'ACADÈMIA',
                 'training_resource_short_name' => 'brm-academia',
                 'training_resource_description' => 'Formació contínua, formació ocupacional, formació subvencionada, reforç escolar i acadèmia d\'anglès de manera privada',
@@ -324,10 +335,21 @@ class TrainingResourceTableSeeder extends Seeder
                 'training_resource_softDeleted' => 'false',
                 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
+            array(
+                'training_resource_id' => '65',
+                'training_resource_name' => 'AULA 2000, SCP',
+                'training_resource_short_name' => 'aula-2000',
+                'training_resource_description' => 'Formació contínua, formació ocupacional, formació subvencionada',
+                'training_resource_thumbnail' => 'default_thumbnail.png',
+                'training_resource_external_url' => 'http://www.aula2000.cat',
+                'training_resource_parentResourceId' => '2',
+                'training_resource_softDeleted' => 'false',
+                'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
+
+
             /*
              * FORMACIÓ OCUPACIONAL: 3
              */
-
             array(
                 'training_resource_id' => '80',
                 'training_resource_name' => 'CFO Ajuntament de Tortosa',
@@ -342,9 +364,31 @@ class TrainingResourceTableSeeder extends Seeder
             array('training_resource_id' => '81',
                 'training_resource_name' => 'UGT-IDFO',
                 'training_resource_short_name' => 'ugt',
-                'training_resource_description' => ' ',
+                'training_resource_description' => 'Formació contínua, formació ocupacional, formació subvencionada',
                 'training_resource_thumbnail' => 'logo_idfo_ugt.png',
                 'training_resource_external_url' => 'http://www.idfo.com/',
+                'training_resource_parentResourceId' => '3',
+                'training_resource_softDeleted' => 'false',
+                'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
+
+            array(
+                'training_resource_id' => '82',
+                'training_resource_name' => 'CENTRE D\'ESTUDIS BAYERRI',
+                'training_resource_short_name' => 'centre-estudis-bayerri',
+                'training_resource_description' => 'Cursos de formació subvencionats: per a persones desocupades, joves inscrits al col·lectiu de Garantia Juvenil, persones en actiu. Cursos de formació contínua per a empreses i formació privada',
+                'training_resource_thumbnail' => 'logo_centre_estudis_bayerri.png',
+                'training_resource_external_url' => 'http://www.tortosa.com/bayerri/',
+                'training_resource_parentResourceId' => '3',
+                'training_resource_softDeleted' => 'false',
+                'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
+
+            array(
+                'training_resource_id' => '83',
+                'training_resource_name' => 'FORMACIÓ TERRES DE L\'EBRE',
+                'training_resource_short_name' => 'formació_terres-delebre',
+                'training_resource_description' => 'Escola de soldadura',
+                'training_resource_thumbnail' => 'default_thumbnail.png',
+                'training_resource_external_url' => 'http://www.formacioterresdelebre.com/es/index.php',
                 'training_resource_parentResourceId' => '3',
                 'training_resource_softDeleted' => 'false',
                 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
@@ -363,18 +407,8 @@ class TrainingResourceTableSeeder extends Seeder
                 'training_resource_softDeleted' => 'false',
                 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
-            array('training_resource_id' => '91',
-                'training_resource_name' => 'AECE',
-                'training_resource_short_name' => 'aece',
-                'training_resource_description' => ' ',
-                'training_resource_thumbnail' => 'logo_aece.jpg',
-                'training_resource_external_url' => 'http://www.aecebre.org/',
-                'training_resource_parentResourceId' => '4',
-                'training_resource_softDeleted' => 'false',
-                'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
-
             array(
-                'training_resource_id' => '92',
+                'training_resource_id' => '91',
                 'training_resource_name' => 'PUNT ÒMNIA',
                 'training_resource_short_name' => 'punt-omnia',
                 'training_resource_description' => 'Activitats, cursos i tallers per millorar les competències digitals i per apropar el seu ús a aspectes com l\'orientació laboral, l\'èxit escolar, etc.',
@@ -384,27 +418,16 @@ class TrainingResourceTableSeeder extends Seeder
                 'training_resource_softDeleted' => 'false',
                 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
-            array(
-                'training_resource_id' => '93',
-                'training_resource_name' => 'CENTRE D\'ESTUDIS BAYERRI',
-                'training_resource_short_name' => 'centre-estudis-bayerri',
-                'training_resource_description' => 'Cursos de formació subvencionats: per a persones desocupades, joves inscrits al col·lectiu de Garantia Juvenil, persones en actiu. Cursos de formació contínua per a empreses i formació privada',
-                'training_resource_thumbnail' => 'logo_centre_estudis_bayerri.png',
-                'training_resource_external_url' => 'http://www.tortosa.com/bayerri/',
+            array('training_resource_id' => '92',
+                'training_resource_name' => 'AECE',
+                'training_resource_short_name' => 'aece',
+                'training_resource_description' => 'Associació ',
+                'training_resource_thumbnail' => 'logo_aece.jpg',
+                'training_resource_external_url' => 'http://www.aecebre.org/',
                 'training_resource_parentResourceId' => '4',
                 'training_resource_softDeleted' => 'false',
                 'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
-            array(
-                'training_resource_id' => '94',
-                'training_resource_name' => 'FORMACIÓ TERRES DE L\'EBRE',
-                'training_resource_short_name' => 'formació_terres-delebre',
-                'training_resource_description' => 'Escola de soldadura',
-                'training_resource_thumbnail' => 'default_thumbnail.png',
-                'training_resource_external_url' => 'http://www.formacioterresdelebre.com/es/index.php',
-                'training_resource_parentResourceId' => '4',
-                'training_resource_softDeleted' => 'false',
-                'training_resource_softDeletedDate' => '0000-00-00 00:00:00'),
 
             // INSTITUT DE L'EBRE: 20
             array(
