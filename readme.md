@@ -1,4 +1,4 @@
-## RESTFUl API del l'Aplicació Tot Formació.
+## RESTFUl API de l'Aplicació Tot Formació.
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nicolaeturcan/trainingresourceapp/build-status/master)
@@ -8,7 +8,7 @@
 [![Dependency Status](https://img.shields.io/david/nicolaeturcan/trainingresourceapp.svg)](https://david-dm.org/nicolaeturcan/trainingresourceapp)
 [![License](https://img.shields.io/github/license/nicolaeturcan/trainingresourceapp.svg)](https://raw.githubusercontent.com/nicolaeturcan/trainingresourceapp/master/LICENSE)
 
-Tot Formació és una aplicació multiplataforma amb l'objectiu de fàcilitar informació sobre les formacións professionals que puguis trobar a diversos instituts i altres entitats de les Terres de l'Ebre.
+Tot Formació és una aplicació multiplataforma amb l'objectiu de fàcilitar la informació sobre les formacions professionals que et puguis trobar als diversos instituts i entitats de les Terres de l'Ebre.
 
 
 ## Documentació del projecte
